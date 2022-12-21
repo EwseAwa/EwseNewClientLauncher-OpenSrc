@@ -1,5 +1,7 @@
 # EwseNewClientLauncher-OpenSRC
 
+Woops!Click Star
+
 # Project
 Powered By Ewse.
 
