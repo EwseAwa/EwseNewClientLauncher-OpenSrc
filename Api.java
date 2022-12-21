@@ -24,9 +24,6 @@ public class Api {
 
     public static void fuckNeteaseBox() {
         try {
-            final Field authField = YggdrasilMinecraftSessionService.class.getDeclaredField("auth");
-            authField.setAccessible(true);
-            auth = (AuthenticationCpp) authField.get(YggdrasilMinecraftSessionService.class);
             String line = System.getProperty("sun.java.command");
             uuid = line.substring(line.lastIndexOf("--uuid ") + 7, line.indexOf(" --accessToken")).replace(" ", "");
             token = line.substring(line.lastIndexOf("--accessToken ") + 14, line.lastIndexOf("--accessToken ") + 47).replace(" ", "");
