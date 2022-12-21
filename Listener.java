@@ -30,11 +30,6 @@ public class Listener implements Runnable {
                     if (clientInputStr.contains("Connect")) {
                         try {
                             //clientInputStr.split("\\|")[2] is serverid
-                            final Class  nativeClass = Launch.classLoader.loadClass("nativeTransformer");
-                            final Field field_str = nativeClass.getDeclaredField("str");
-                            field_str.setAccessible(true);
-                            field_str.set(field_str,clientInputStr.split("\\|")[2]);
-                            Library.Test();
                             Api.auth.Authentication(Api.neteaseControlPort, clientInputStr.split("\\|")[2]);
                         }catch (Exception e) {
                             out.writeUTF("错的，呜呜呜|" + Api.Version);
